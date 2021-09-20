@@ -1,0 +1,2020 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+@font-face {
+    font-family: "Museo Sans Cyrl";
+    font-style: normal;
+    font-weight: 400;
+    src: url("fonts/Museo-Sans-Cyr/MuseoSansCyrl_0.otf");
+}
+@font-face {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 400;
+    src: url("fonts/SFProDisplay-Medium.ttf");
+}
+html {
+    font-size: 18px;
+    background: rgb(73, 76, 80);
+}
+main {
+    display: flex;
+    flex-direction: column;
+}
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 80px 0;
+    margin: 5px;
+    
+    background: #ffffff;  
+}
+blockquote {
+    margin: 40px;
+}
+
+/*================== SECTION 1 =================*/
+/*================== QUOTE_1 ===================*/
+/* рамка */
+.quote_1  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform-style: preserve-3d;
+    box-sizing: border-box;
+
+    border: 3px solid black;
+    border-bottom: transparent;
+}
+/* треугольник внизу рамки */
+.quote_1::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: calc(100% + 6px);
+    height: 40px;
+    top: 100%;
+    background: #000;
+    clip-path: polygon(
+    0 0,      /*1*/
+    49% 0,  /*2*/
+    50% 65%,  /*3*/
+    51% 0,  /*4*/
+    100% 0,   /*5*/
+    100% 3px, /*6*/
+    91% 3px,  /*7*/
+    91% 0,    /*8*/
+    77% 0,    /*9*/
+    77% 3px,  /*10*/
+    51.2% 3px,/*11*/
+    50% 82.5%,  /*12*/
+    48.8% 3px,/*13*/
+    0 3px);   /*14*/
+
+}
+/* текст */
+.quote_1 .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    text-align: left;
+
+    width: 992px;
+    margin: 72px 49px 108px;
+
+    font-family: Lora;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0em;
+}
+/* смещённый фон */
+.quote_1 .text::before {
+    content: "";
+    display: block;
+    position: absolute;
+    
+    width: 116%;
+    height: calc(100% + 183px);
+    /* left: -77.5px; */
+    top: -128px;
+
+    background: #FDF0ED;
+    transform: translateZ(-1px);
+}
+/* ковычки */
+.quote_1 .text::after {
+    content: url(img/quote_1/quote_1_1.svg);
+    display: block;
+    position: absolute;
+    box-sizing: border-box;
+
+    bottom: -148px;
+    right: 80px;
+}
+/* Автор */
+.quote_1 .label {
+    display: block;
+    position: absolute;
+    text-align: center;
+
+    margin: 0;
+    padding: 0 24px;
+    top: -35px;
+    left: 100px;
+
+    background: #FDF0ED;
+
+    font-family: Lora;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 70px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+/*================== QUOTE_2 ===================*/
+.quote_2 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transform-style: preserve-3d;
+
+    background: #DFEBE1;
+}
+/* рамка */
+.quote_2::before, .quote_2::after {
+    content: "";
+    display: block;
+    position: absolute; 
+    box-sizing: border-box;
+
+    height: calc(104%);
+    width: 58.5px;
+    top: -41px;
+    
+    border: 5px solid black;
+}
+.quote_2::before{
+    left: 31px;
+    border-right: 0;       
+}
+.quote_2::after {
+    right: -29px;
+    border-left: 0;
+}
+/* Текст */
+.quote_2 .text {
+    order: 1;
+
+    width: 992px;
+    margin: 57px 54px 75px;
+    
+    font-family: Lora;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: center;  
+}
+/* ковычки */
+.quote_2 .text::before, .quote_2 .text::after {
+    position: absolute;
+    content: url(img/quote_2/quote_2_1.svg);
+}
+.quote_2 .text::before {
+    left: 80px;
+    top: -10px;
+}
+.quote_2 .text::after {
+    right: 40px;
+    bottom: 40px;
+    transform: rotate(180deg);
+}
+/* Автор */
+.quote_2 .label {
+    order: 2;
+
+    position: relative;
+    text-align: center;
+
+    margin: 32px 54px -35px;
+    top: -70px;
+
+    font-family: Lora;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 57px;
+    
+    color: #5E7D63;
+}
+
+/*================== QUOTE_3 ===================*/
+.quote_3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;
+    transform-style: preserve-3d;
+     
+    border: 5px solid #000000;
+}
+/* ковычки */
+.quote_3::before, .quote_3::after {
+    position: absolute;
+}
+.quote_3::before {
+    content: url(img/quote_3/quote_3_1.svg);
+    top: -32px;
+    left: 49px;
+}
+.quote_3::after {
+    content: url(img/quote_3/quote_3_2.svg);
+    bottom: -56px;
+    right: 49px;
+}
+/* Текст */ 
+.quote_3 .text {
+    order: 1;
+
+    text-align: center;
+
+    width: 759px;
+    margin: 62px 190px;
+
+    font-family: SF Pro Display;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 41px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+/* рамка */
+.quote_3 .text::before{
+    border: 5px solid #333D34;
+}
+/* Автор */
+.quote_3 .label {
+    order: 2;
+
+    position: relative;
+    text-align: center;
+
+    top: -28px;
+    margin: 0 190px 17px;
+
+    font-family: SF Pro Display;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 41px;
+    letter-spacing: 0em;
+}
+
+/*================== QUOTE_4 ===================*/
+.quote_4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #FDF8F4;
+}
+/* Текст */
+.quote_4 .text {
+    order: 1;
+
+    position: relative;
+    transform-style: preserve-3d;
+
+    margin: 72px 74px 72px;
+    width: 992px;
+
+    font-family: Lora;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 57px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #000000;
+
+    word-wrap: break-word;
+    white-space: pre-line;
+}
+/* ковычки */
+.quote_4 .text::before, .quote_4 .text::after {
+    content: url(img/quote_4/quote_4_1.svg);
+    position: absolute;
+}
+.quote_4 .text::before {
+    top: -24px;
+    left: 48px;
+    transform: translateZ(-1px);
+}
+.quote_4 .text::after {
+    top: calc(100% -24px);
+    right: 48px;
+    transform: rotate(180deg) translateZ(-1px);
+}
+/* Автор */
+.quote_4 .label {
+    order: 2;
+    
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    margin: 0 74px 42px;
+    top: -5px;
+
+    font-family: Museo Sans Cyrl;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 33px;
+    
+    color: #000000;
+
+    letter-spacing: 0.095em;
+    text-transform: uppercase;
+}
+/* разделитель */
+.quote_4 .label::before{
+    content: "";
+    display: block;
+    position: absolute; 
+
+    width: 139px;
+    top: -23px;
+
+    border: 2px solid #000000;
+
+    background: #000000;
+}
+
+/*================== QUOTE_5 ===================*/
+.quote_5 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+
+    background: #516D56;
+}
+/* ковычки */
+.quote_5::before {
+    content: url(img/quote_5/quote_5_1.svg);
+    position: absolute;
+    top: -21px;
+}
+/* Текст */
+.quote_5 .text {
+    order: 1;
+
+    position: relative;
+    transform-style: preserve-3d;
+
+    margin: 72px 74px;
+    width: 992px;
+
+    font-family: Lora;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 57px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #FFFFFF;
+
+    word-wrap: break-word;
+    white-space: pre-line;
+}
+/* Автор */
+.quote_5 .label {
+    order: 2;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    top: -5px;
+    margin: 0 74px 42px;
+    
+    font-family: Museo Sans Cyrl;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 33px;
+    
+    letter-spacing: 0.095em;
+    text-transform: uppercase;
+    
+    color: #FFFFFF;
+}
+/* разделитель */
+.quote_5 .label::before{
+    content: "";
+    display: block;
+    position: absolute;
+
+    width: 139px;
+    top: -23px;
+
+    border: 2px solid #000000;
+    background: #000000;
+}
+
+/*================== QUOTE_6 ===================*/
+.quote_6 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transform-style: preserve-3d;
+    
+    border-radius: 20px 20px 0 20px;
+    margin-bottom: 120px;
+
+    background: #FDF8F4;
+    
+    box-shadow: -23.1371px 70.2899px 98px rgba(168, 148, 121, 0.07), -13.6231px 41.3867px 51.1168px rgba(168, 148, 121, 0.050624), -6.99666px 21.2557px 23.9904px rgba(168, 148, 121, 0.039312), -2.81347px 8.54726px 10.5056px rgba(168, 148, 121, 0.030688), -0.629329px 1.91189px 4.5472px rgba(168, 148, 121, 0.019376);
+}
+/* уголок */
+.quote_6::after {
+    content: '';
+    display: block;
+    position: absolute;
+
+    width: 210px;
+    height: 210px;
+    top: calc(100% - 150px); 
+    right: 0;
+
+    border-radius: 0 20px 0 0 ;
+    background: #fdf8f4;
+
+    transform: rotate(90deg) skew(-30deg) translateZ(0px);
+}
+.quote_6::before {
+    content: '';
+    display: block;
+    position: absolute;
+
+    width: 225px;
+    height: 20px;
+    top: calc(100% + 34px); 
+    right: -5px;
+    
+    background: #000;
+    box-shadow: 20px 20px 20px 0px rgba(168, 148, 121, 0.07);
+
+    transform: rotate(30deg) translateZ(-1px);
+}
+/* Текст */
+.quote_6 .text {
+    order: 1;
+
+    width: 1022px;
+    margin: 81px 59px 95px;
+
+    transform: translateZ(1px);
+
+    font-family: Lora;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 57px;
+
+    color: #000000;
+}
+/* ковычки */
+.quote_6 .text::before {
+    content: url(img/quote_6/quote_6_1.svg);
+    display: block;
+    position: absolute;
+
+    top: -113px;
+    left: 0px;
+}
+/* Автор */
+.quote_6 .label {
+    order: 2;
+
+    position: absolute;
+
+    bottom: 0;
+    margin: 0 0 35px 59px;
+
+    font-family: Lora;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 33px;
+    
+    color: #BFA997;
+}
+
+/*================== QUOTE_7 ===================*/
+.quote_7 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    box-sizing: border-box;
+    transform-style: preserve-3d;
+
+    /* width: 970px; */
+    height: max-content;
+}
+/* Фон */
+.quote_7::before {
+    content: "";
+    display: block;
+    position: absolute;
+
+    height: 100%;
+    width: 1136px;
+
+    background: #377374;
+    transform-origin: bottom right;
+    transform: translateZ(-1px) rotate(.7deg);
+}
+.quote_7::before {
+    /* left: -6.5%; */
+    clip-path: polygon(0 0, 100% 0%, 91% 100%, 7.5% 100%);
+}
+/* Текст */
+.quote_7 .text {
+    order: 1;
+
+    position: relative;
+    transform-style: preserve-3d;
+
+    margin: 87px 74px 148px;
+    width: 992px;
+
+    font-family: Lora;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 57px ;
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+    word-wrap: break-word;
+    white-space: pre-line;
+}
+/* ковычки */
+.quote_7 .text::before, .quote_7 .text::after {
+    position: absolute;
+    transform: rotate(0.7deg);
+}
+.quote_7 .text::before {
+    content: url(img/quote_7/quote_7_1.svg);
+    top: -150px;
+    left: 33px;
+}
+.quote_7 .text::after {
+    content: url(img/quote_7/quote_7_2.svg);
+    bottom: -215px;
+    right: 110px;
+}
+/* Автор */
+.quote_7 .label {
+    order: 2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+
+    bottom: 0;
+    margin: 0 0 65.5px 0;
+    transform: rotate(-0.7deg);
+
+    font-family: Museo Sans Cyrl;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 33px;
+    
+    letter-spacing: 0.095em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+/*================== QUOTE_8 ===================*/
+.quote_8 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    min-height: 391px;
+}
+/* рамка */
+.quote_8::before {
+    content: '';
+    display: block;
+    position: absolute;
+
+    background-image: url(img/quote_8/Vector_1.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    width: 100%;
+    height: 214px;
+    top: 0;
+}
+.quote_8::after {
+    content: '';
+    display: block;
+    position: absolute;
+
+    background-image: url(img/quote_8/Vector_2.svg );
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+
+    width: calc(100% + 1px);
+    height: 187px;
+    bottom: 0;
+}
+.quote_8 .text::before, .quote_8 .text::after {
+    content: '';
+    display: block;
+    position: absolute;
+    box-sizing: border-box;
+
+    height: calc(100% - 380px);
+    bottom: 180px;
+
+    border: 8px solid #FF7336;
+    border-top: transparent;
+    border-bottom: transparent;
+}
+.quote_8 .text::before {
+    width: 100%;
+    left: 0px;
+
+    border-right: transparent;
+}
+.quote_8 .text::after {
+    width: calc(100% - 2px);
+    left: 3px;
+
+    border-left: transparent;
+    border-radius: 0px 8px 0px 0px;
+}
+/* Текст */
+.quote_8 .text {
+    order: 1;
+
+    margin: 96px 140px 113px;
+    width: 759px;
+
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 57px;
+    
+    text-align: center;
+    
+    color: #000000;
+}
+/* Автор */
+.quote_8 .label {
+    order: 2;
+
+    position: relative;
+
+    bottom: 75px;
+    margin: 0 140px 0;
+
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 41px;
+    
+    color: #000000;
+    text-align: center;
+}
+
+/*================== SECTION 2=================*/
+/*================== QUOTE_9 ===================*/
+.quote_9 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-sizing: border-box;
+
+    border: 5px solid #000000;
+}
+/* ковычки */
+.quote_9::before {
+    content: url(img/quote_9/quote_9_1.svg);
+    position: absolute;
+    top: -50px;
+    left: 50px;
+}
+/* Текст */
+.quote_9 .text {
+    order: 2;
+
+    width: 1040px;
+    margin: 0 50px 48px;
+
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 41px;
+    
+    color: #000000;
+}
+/* Заголовок */
+.quote_9 .label {
+    order: 1;
+
+    margin: 89px 50px 11px;
+
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 49px;
+    
+    text-align: left;
+    color: #000000;
+}
+
+/*================== QUOTE_10 ===================*/
+.quote_10 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transform-style: preserve-3d;
+    box-sizing: border-box;
+    align-items: center;
+
+    margin-top: 62px;
+    margin-bottom: 85px;
+    
+    border-radius: 20px;
+
+    background: #FFEDED;
+}
+/* ковычки */
+.quote_10::before {
+    content: url(img/quote_10/quote_10_1.svg);
+    position: absolute;
+    top: -110px;
+    left: calc(50% - 120px);
+}
+/* треугольник внизу */
+.quote_10::after {
+    content: '';
+    position: absolute;
+
+    bottom: -60px;
+    width: 120px;
+    height: 120px;
+
+    border-radius: 0 0 20px 0;
+    background: #FFEDED;
+
+    transform: rotate(50.5deg) skew(10deg) translateZ(-1px);
+}
+/* Текст */
+.quote_10 .text {
+    order: 2;
+
+    width: 1018px;
+    margin: 23px 61px 70px;
+
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 41px;
+    
+    text-align: center;
+    
+    color: #000000;
+}
+/* Заголовок */
+.quote_10 .label {
+    order: 1;
+    margin: 133px 61px 0;
+
+    font-family: Museo Sans Cyrl;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 49px;
+    
+    letter-spacing: 0.095em;
+    text-transform: uppercase;
+    text-align: center;
+    
+    color: #000000;
+}
+
+/*================== QUOTE_11 ===================*/
+.quote_11 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transform-style: preserve-3d;
+    box-sizing: border-box;
+    
+    margin-top: 50px;
+    border-radius: 20px;
+
+    background: #DC0000;
+}
+/* ковычки */
+.quote_11::before {
+    content: url(img/quote_11/quote_11_1.svg);
+    position: absolute;
+    top: -60px;
+    left: -16px;
+}
+/* Текст */
+.quote_11 .text {
+    order: 2;
+
+    width: 826px;
+    margin: 77px 67px 39px 247px;
+
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 33px;
+    
+    color: #FFFFFF;
+}
+/* Заголовок */
+.quote_11 .label {
+    order: 1;
+
+    position: absolute;
+    
+    top: -25px;
+    left: 247px;  
+    padding: 9px 34px;
+    margin: 0;
+
+    background: #000000;
+    border-radius: 8px;
+
+    font-family: Museo Sans Cyrl;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 49px;
+    
+    letter-spacing: 0.095em;
+    text-transform: uppercase;
+    
+    color: #FFFFFF;
+}
+
+/*================== QUOTE_12 ===================*/
+.quote_12 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    transform-style: preserve-3d;
+    box-sizing: border-box;
+    
+    border-top: 4px solid #DC0000;
+    border-bottom: 4px solid #DC0000;
+}
+/* ковычки */
+.quote_12::before {
+    content: url(img/quote_12/Group_12_1.svg);
+    position: absolute;
+    left: 50px;
+}
+/* Текст */
+.quote_12 .text {
+    order: 2;
+
+    width: 792px;
+    margin: 17px 67px 68px 247px;
+
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 33px;
+    
+    color: #000000;
+}
+/* Заголовок */
+.quote_12 .label {
+    order: 1;
+
+    margin: 63px 67px 17px 247px;
+
+    font-family: Museo Sans Cyrl;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 49px;
+    
+    letter-spacing: 0.095em;
+    text-transform: uppercase;
+    
+    color: #000000;
+}
+
+/*================== QUOTE_13 ===================*/
+.quote_13 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    transform-style: preserve-3d;
+    box-sizing: border-box;
+    
+    background: #FFF5F5;
+    border-radius: 5px;
+}
+/* ковычки */
+.quote_13::before {
+    content: url(img/quote_13/Danger_13_1.svg);
+    position: absolute;
+    left: 50px;
+}
+/* Текст */
+.quote_13 .text {
+    order: 2;
+    width: 792px;
+    margin: 9px 123px 37px 225px;
+
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 33px;
+    
+    color: #000000;
+}
+/* Заголовок */
+.quote_13 .label {
+    order: 1;
+    margin: 27px 123px 0 225px;
+
+    font-family: Museo Sans Cyrl;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 49px;
+    
+    letter-spacing: 0.095em;
+    text-transform: uppercase;
+    
+    color: #DC0000;
+}
+
+/*================== QUOTE_14 ===================*/
+.quote_14 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+    transform-style: preserve-3d;
+    overflow: hidden;
+
+    background: #1D0307;
+}
+/* ковычки */
+.quote_14::before {
+    content: url(img/quote_14/quote_14_1.svg);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/* Текст */
+.quote_14 .text {
+    order: 2;
+
+    width: 792px;
+    margin: 17px 31px 42px 272px;
+
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 33px;
+    
+    color: #FFFFFF;
+
+    transform: translateZ(1px); 
+}
+/* Заголовок */
+.quote_14 .label {
+    order: 1;
+
+    margin: 43px 31px 0 272px;
+
+    font-family: Museo Sans Cyrl;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 49px;
+    
+    letter-spacing: 0.095em;
+    text-transform: uppercase;
+    
+    color: #FFFFFF;
+
+    transform: translateZ(1px);
+}
+
+/*================== QUOTE_15 ===================*/
+.quote_15 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+/* Фон */
+.quote_15::before , .quote_15::after  {
+    content: '';
+    display: block;
+    position: absolute;
+
+    background-image: repeating-linear-gradient(-45deg, #FF1A01, #FF1A01 29px, transparent 29px, transparent 67px);
+
+    height: 29px;
+    width: 100%;
+} 
+.quote_15::before {
+    top: 0;
+}
+.quote_15::after {
+    bottom: 0;
+}
+/* Текст */
+.quote_15 .text {
+    order: 2;
+/* position: relative; */
+    width: 837px;
+    margin: 17px 32px 111px 281px; 
+    
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 33px;
+    
+    color: #000000;
+}
+/* ковычки */
+.quote_15 .text::after {
+    content: url(img/quote_15/Group_15_1.svg);
+    display: block;
+    position: absolute;
+    left: 80px;
+    top: 90px;
+}
+/* Заголовок */
+.quote_15 .label {
+    order: 1;
+
+    margin: 100px 32px 0 281px; 
+
+    font-family: Museo Sans Cyrl;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 49px;
+    
+    letter-spacing: 0.095em;
+    text-transform: uppercase;
+    
+    color: #000000;
+    
+    transform: translateZ(1px);
+}
+
+/*================== SECTION 3=================*/
+/*================== QUOTE_16 ===================*/
+.quote_16 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-sizing: border-box;
+
+    border: 5px solid #000000;
+}
+/* ковычки */
+.quote_16::before {
+    content: url(img/quote_16/quote_16_1.svg);
+    position: absolute;
+    top: -50px;
+    left: 50px;
+}
+/* Текст */
+.quote_16 .text {
+    order: 2;
+
+    width: 1040px;
+    margin: 0 50px 48px;
+
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 41px;
+    
+    color: #000000;
+}
+/* Заголовок */
+.quote_16 .label {
+    order: 1;
+
+    margin: 89px 50px 11px;
+
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 49px;
+    
+    text-align: left;
+    color: #000000;
+}
+
+/*================== QUOTE_17 ===================*/
+.quote_17 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    transform-style: preserve-3d;
+    box-sizing: border-box;
+    
+    margin-top: 62px;
+    margin-bottom: 85px;
+
+    border-radius: 20px;
+    background: #E8FFE2;
+}
+/* ковычки */
+.quote_17::before {
+    content: url(img/quote_17/quote_17_1.svg);
+    position: absolute;
+    top: -110px;
+    left: calc(50% - 120px);
+}
+/* треугольник внизу */
+.quote_17::after {
+    content: '';
+    position: absolute;
+
+    bottom: -60px;
+    width: 120px;
+    height: 120px;
+
+    background: #E8FFE2;
+
+    transform: rotate(50.5deg) skew(10deg) translateZ(-1px);
+    border-radius: 0 0 20px 0;
+}
+/* Текст */
+.quote_17 .text {
+    order: 2;
+
+    width: 1018px;
+    margin: 23px 61px 70px;
+
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 41px;
+    
+    text-align: center;
+    
+    color: #000000;
+}
+/* Заголовок */
+.quote_17 .label {
+    order: 1;
+
+    margin: 133px 61px 0;
+
+    font-family: Museo Sans Cyrl;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 49px;
+    
+    letter-spacing: 0.095em;
+    text-transform: uppercase;
+    text-align: center;
+    
+    color: #000000;
+}
+
+/*================== QUOTE_18 ===================*/
+.quote_18 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transform-style: preserve-3d;
+    box-sizing: border-box;
+    
+    margin-top: 50px;
+    border-radius: 20px;
+
+    background: #4AAE30;
+}
+/* ковычки */
+.quote_18::before {
+    content: url(img/quote_18/quote_18_1.svg);
+    position: absolute;
+    top: -15px;
+    left: 37.5px;
+}
+/* Текст */
+.quote_18 .text {
+    order: 2;
+
+    width: 826px;
+    margin: 77px 67px 39px 247px;
+
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 33px;
+    
+    color: #FFFFFF;
+}
+/* Заголовок */
+.quote_18 .label {
+    order: 1;
+
+    position: absolute;
+    
+    top: -25px;
+    left: 247px;  
+    padding: 9px 34px;
+    margin: 0;
+
+    border-radius: 8px;
+    background: #000000;
+
+    font-family: Museo Sans Cyrl;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 49px;
+    
+    letter-spacing: 0.095em;
+    text-transform: uppercase;
+    
+    color: #FFFFFF;
+}
+
+/*================== QUOTE_19 ===================*/
+.quote_19 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    transform-style: preserve-3d;
+    box-sizing: border-box;
+    
+    border-top: 4px solid #4AAE30;
+    border-bottom: 4px solid #4AAE30;
+}
+/* ковычки */
+.quote_19::before {
+    content: url(img/quote_19/quote_19_1.svg);
+    position: absolute;
+    left: 50px;
+}
+/* Текст */
+.quote_19 .text {
+    order: 2;
+
+    width: 792px;
+    margin: 17px 67px 68px 247px;
+
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 33px;
+    
+    color: #000000;
+}
+/* Заголовок */
+.quote_19 .label {
+    order: 1;
+
+    margin: 63px 67px 17px 247px;
+
+    font-family: Museo Sans Cyrl;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 49px;
+    
+    letter-spacing: 0.095em;
+    text-transform: uppercase;
+    
+    color: #000000;
+}
+
+/*================== QUOTE_20 ===================*/
+.quote_20 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    transform-style: preserve-3d;
+    box-sizing: border-box;
+    
+    background: #F0FFEC;
+    border-radius: 5px;
+}
+/* ковычки */
+.quote_20::before {
+    content: url(img/quote_20/quote_20_1.svg);
+    position: absolute;
+    left: 50px;
+}
+/* Текст */
+.quote_20 .text {
+    order: 2;
+
+    width: 792px;
+    margin: 9px 123px 37px 225px;
+
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 33px;
+    
+    color: #000000;
+}
+/* Заголовок */
+.quote_20 .label {
+    order: 1;
+
+    margin: 27px 123px 0 225px;
+
+    font-family: Museo Sans Cyrl;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 49px;
+    
+    letter-spacing: 0.095em;
+    text-transform: uppercase;
+    
+    color: #4AAE30;
+}
+
+/*================== SECTION 4=================*/
+/*================== QUOTE_21 ===================*/
+.quote_21 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-sizing: border-box;
+
+    border: 5px solid #000000;
+}
+/* ковычки */
+.quote_21::before {
+    content: url(img/quote_21/quote_21_1.svg);
+    position: absolute;
+    top: -50px;
+    left: 50px;
+}
+/* Текст */
+.quote_21 .text {
+    order: 2;
+
+    width: 1040px;
+    margin: 0 50px 48px;
+
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 41px;
+    
+    color: #000000;
+}
+/* Заголовок */
+.quote_21 .label {
+    order: 1;
+
+    margin: 89px 50px 11px;
+
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 49px;
+
+    text-align: left;
+    color: #000000;
+}
+
+/*================== QUOTE_22 ===================*/
+.quote_22 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transform-style: preserve-3d;
+    box-sizing: border-box;
+    align-items: center;
+
+    margin-top: 62px;
+    margin-bottom: 85px;
+
+    background: #E3EDFF;
+    border-radius: 20px;
+}
+/* ковычки */
+.quote_22::before {
+    content: url(img/quote_22/quote_22_1.svg);
+    position: absolute;
+    top: -110px;
+    left: calc(50% - 120px);
+}
+/* треугольник внизу */
+.quote_22::after {
+    content: '';
+    position: absolute;
+
+    bottom: -60px;
+    width: 120px;
+    height: 120px;
+
+    background: #E3EDFF;
+
+    transform: rotate(50.5deg) skew(10deg) translateZ(-1px);
+    border-radius: 0 0 20px 0;
+}
+/* Текст */
+.quote_22 .text {
+    order: 2;
+
+    width: 1018px;
+    margin: 23px 61px 70px;
+
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 41px;
+    
+    text-align: center;
+    
+    color: #000000;
+}
+/* Заголовок */
+.quote_22 .label {
+    order: 1;
+
+    margin: 133px 61px 0;
+
+    font-family: Museo Sans Cyrl;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 49px;
+    
+    letter-spacing: 0.095em;
+    text-transform: uppercase;
+    text-align: center;
+    
+    color: #000000;
+}
+
+/*================== QUOTE_23 ===================*/
+.quote_23 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transform-style: preserve-3d;
+    box-sizing: border-box;
+    
+    border-radius: 20px;
+    margin-top: 50px;
+
+    background: #255DCC;
+}
+/* ковычки */
+.quote_23::before {
+    content: url(img/quote_23/quote_23_1.svg);
+    position: absolute;
+    top: -50px;
+    left: -23px;
+}
+/* Текст */
+.quote_23 .text {
+    order: 2;
+
+    width: 826px;
+    margin: 77px 67px 39px 247px;
+
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 33px;
+    
+    color: #FFFFFF;
+}
+/* Заголовок */
+.quote_23 .label {
+    order: 1;
+
+    position: absolute;
+
+    top: -25px;
+    left: 247px;  
+    padding: 9px 34px;
+    margin: 0;
+
+    border-radius: 8px;
+    background: #000000;
+
+    font-family: Museo Sans Cyrl;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 49px;
+    
+    letter-spacing: 0.095em;
+    text-transform: uppercase;
+    
+    color: #FFFFFF;
+}
+
+/*================== QUOTE_24 ===================*/
+.quote_24 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    transform-style: preserve-3d;
+    box-sizing: border-box;
+    
+    border-top: 4px solid #255DCC;
+    border-bottom: 4px solid #255DCC;
+}
+/* ковычки */
+.quote_24::before {
+    content: url(img/quote_24/quote_24_1.svg);
+    position: absolute;
+    left: 50px;
+}
+/* Текст */
+.quote_24 .text {
+    order: 2;
+
+    width: 792px;
+    margin: 17px 67px 68px 247px;
+
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 33px;
+    
+    color: #000000;
+}
+/* Заголовок */
+.quote_24 .label {
+    order: 1;
+
+    margin: 63px 67px 17px 247px;
+
+    font-family: Museo Sans Cyrl;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 49px;
+    
+    letter-spacing: 0.095em;
+    text-transform: uppercase;
+    
+    color: #000000;
+}
+
+/*================== QUOTE_25 ===================*/
+.quote_25 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    transform-style: preserve-3d;
+    box-sizing: border-box;
+    
+    background: #EEF4FF;
+    border-radius: 5px;
+}
+/* ковычки */
+.quote_25::before {
+    content: url(img/quote_25/quote_25_1.svg);
+    position: absolute;
+    left: 50px;
+}
+/* Текст */
+.quote_25 .text {
+    order: 2;
+
+    width: 792px;
+    margin: 9px 123px 37px 225px;
+
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 33px;
+    
+    color: #000000;
+}
+/* Заголовок */
+.quote_25 .label {
+    order: 1;
+    margin: 27px 123px 0 225px;
+
+    font-family: Museo Sans Cyrl;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 49px;
+    
+    letter-spacing: 0.095em;
+    text-transform: uppercase;
+    
+    color: #255DCC; 
+}
+
+/*================== SECTION 5=================*/
+/*================== QUOTE_26 ===================*/
+.quote_26 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-sizing: border-box;
+
+    border: 5px solid #000000;
+}
+/* ковычки */
+.quote_26::before {
+    content: url(img/quote_26/quote_26_1.svg);
+    position: absolute;
+    top: -50px;
+    left: 50px;
+}
+/* Текст */
+.quote_26 .text {
+    order: 2;
+
+    width: 1040px;
+    margin: 0 50px 48px;
+
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 41px;
+
+    color: #000000;
+}
+/* Заголовок */
+.quote_26 .label {
+    order: 1;
+
+    margin: 89px 50px 11px;
+
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 49px;
+    
+    text-align: left;
+    color: #000000;
+}
+
+/*================== QUOTE_27 ===================*/
+.quote_27 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transform-style: preserve-3d;
+    box-sizing: border-box;
+    align-items: center;
+
+    margin-top: 62px;
+    margin-bottom: 85px;
+
+    border-radius: 20px;
+    background: #FFFCEA;
+}
+/* ковычки */
+.quote_27::before {
+    content: url(img/quote_27/quote_27_1.svg);
+    position: absolute;
+    top: -110px;
+    left: calc(50% - 120px);
+}
+/* треугольник внизу */
+.quote_27::after {
+    content: '';
+    position: absolute;
+
+    bottom: -60px;
+    width: 120px;
+    height: 120px;
+
+    border-radius: 0 0 20px 0;
+    background: #FFFCEA;
+
+    transform: rotate(50.5deg) skew(10deg) translateZ(-1px);
+}
+/* Текст */
+.quote_27 .text {
+    order: 2;
+
+    width: 1018px;
+    margin: 23px 61px 70px;
+
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 41px;
+    
+    text-align: center;
+    
+    color: #000000;
+}
+/* Заголовок */
+.quote_27 .label {
+    order: 1;
+
+    margin: 133px 61px 0;
+
+    font-family: Museo Sans Cyrl;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 49px;
+    
+    letter-spacing: 0.095em;
+    text-transform: uppercase;
+    text-align: center;
+    
+    color: #000000;
+}
+
+/*================== QUOTE_28 ===================*/
+.quote_28 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transform-style: preserve-3d;
+    box-sizing: border-box;
+
+    margin-top: 50px;
+    
+    border-radius: 20px;
+    background: #FFD80E;
+}
+/* ковычки */
+.quote_28::before {
+    content: url(img/quote_28/quote_28_1.svg);
+    position: absolute;
+    top: -60px;
+    left: -16px;
+}
+/* Текст */
+.quote_28 .text {
+    order: 2;
+
+    width: 826px;
+    margin: 77px 67px 39px 247px;
+
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 33px;
+    
+    color: #FFFFFF;
+}
+/* Заголовок */
+.quote_28 .label {
+    order: 1;
+
+    position: absolute;
+    
+    top: -25px;
+    left: 247px;  
+    padding: 9px 34px;
+    margin: 0;
+
+    border-radius: 8px;
+    background: #000000;
+
+    font-family: Museo Sans Cyrl;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 49px;
+    
+    letter-spacing: 0.095em;
+    text-transform: uppercase;
+    
+    color: #FFFFFF;
+}
+
+/*================== QUOTE_29 ===================*/
+.quote_29 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    transform-style: preserve-3d;
+    box-sizing: border-box;
+    
+    border-top: 4px solid #FFD80E;
+    border-bottom: 4px solid #FFD80E;
+}
+/* ковычки */
+.quote_29::before {
+    content: url(img/quote_29/quote_29_1.svg);
+    position: absolute;
+    left: 50px;
+}
+/* Текст */
+.quote_29 .text {
+    order: 2;
+
+    width: 792px;
+    margin: 17px 67px 68px 247px;
+
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 33px;
+    
+    color: #000000;
+}
+/* Заголовок */
+.quote_29 .label {
+    order: 1;
+
+    margin: 63px 67px 17px 247px;
+
+    font-family: Museo Sans Cyrl;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 49px;
+    
+    letter-spacing: 0.095em;
+    text-transform: uppercase;
+    
+    color: #000000;
+}
+
+/*================== QUOTE_30 ===================*/
+.quote_30 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    transform-style: preserve-3d;
+    box-sizing: border-box;
+    
+    background: #FFFDF2;
+    border-radius: 5px;
+}
+/* ковычки */
+.quote_30::before {
+    content: url(img/quote_30/quote_30_1.svg);
+    position: absolute;
+    left: 50px;
+}
+/* Текст */
+.quote_30 .text {
+    order: 2;
+
+    width: 792px;
+    margin: 9px 123px 37px 225px;
+
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 33px;
+    
+    color: #000000;
+}
+/* Заголовок */
+.quote_30 .label {
+    order: 1;
+
+    margin: 27px 123px 0 225px;
+
+    font-family: Museo Sans Cyrl;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 49px;
+    
+    letter-spacing: 0.095em;
+    text-transform: uppercase;
+    
+    color: #D09600;
+}
+
+/*================== QUOTE_31 ===================*/
+.quote_31 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+    transform-style: preserve-3d;
+    overflow: hidden;
+
+    background: #1D0307;
+}
+/* ковычки */
+.quote_31::before {
+    content: url(img/quote_31/icon.svg);
+    position: absolute;
+    top: 0;
+    left: 0 ;
+    transform: scale(150%);
+}
+/* Текст */
+.quote_31 .text {
+    order: 2;
+
+    width: 792px;
+    margin: 17px 31px 42px 272px;
+
+    font-family: SF Pro Display;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 33px;
+    
+    color: #FFFFFF;
+
+    transform: translateZ(1px); 
+}
+/* Заголовок */
+.quote_31 .label {
+    order: 1;
+
+    margin: 43px 31px 0 272px;
+
+    font-family: Museo Sans Cyrl;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 49px;
+    
+    letter-spacing: 0.095em;
+    text-transform: uppercase;
+    
+    color: #FFFFFF;
+
+    transform: translateZ(1px);
+}
